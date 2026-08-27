@@ -13,15 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 import br.edu.fag.catalogservice.service.domain.ProdutoDomain;
 import br.edu.fag.catalogservice.controller.dto.ProdutoDTO;
 import br.edu.fag.catalogservice.controller.mapper.ProdutoDTOMapper;
+import br.edu.fag.catalogservice.service.IProdutoService;
 import br.edu.fag.catalogservice.service.ProdutoService;
 
 @RestController
 @RequestMapping("/api/produtos")
 public class ProdutoController {
 
-    private final ProdutoService produtoService;
+    private final IProdutoService produtoService;
 
-    public ProdutoController(ProdutoService produtoService) {
+    public ProdutoController(IProdutoService produtoService) {
         this.produtoService = produtoService;
     }
 

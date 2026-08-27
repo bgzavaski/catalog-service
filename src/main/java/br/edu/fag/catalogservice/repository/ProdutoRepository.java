@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import br.edu.fag.catalogservice.repository.entity.ProdutoEntity;
 
 @Repository
-public class ProdutoRepository {
+public class ProdutoRepository implements IProdutoRepository {
 
     private final ProdutoRepositoryJpa produtoRepositoryJpa;
 
@@ -13,6 +13,7 @@ public class ProdutoRepository {
         this.produtoRepositoryJpa = produtoRepositoryJpa;    
     }
 
+    @Override
     public ProdutoEntity criar(ProdutoEntity produtoEntity) {
         return produtoRepositoryJpa.save(produtoEntity);
     }

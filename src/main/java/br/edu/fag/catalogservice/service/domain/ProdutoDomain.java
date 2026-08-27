@@ -22,7 +22,7 @@ public class ProdutoDomain {
         }
         if (preco.compareTo(BigDecimal.ZERO) <= 0) {
             throw new RuntimeException("O produto deve custar mais de R$ 0,00.");
-        }
+git        }
     }
     
     public void validarDescricaoProduto() {
