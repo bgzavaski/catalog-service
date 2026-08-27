@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS produtos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
     descricao VARCHAR(500),
-    preco DOUBLE NOT NULL,
+    preco DECIMAL(12, 2) NOT NULL,
     criado_em TIMESTAMP NOT NULL
 );
