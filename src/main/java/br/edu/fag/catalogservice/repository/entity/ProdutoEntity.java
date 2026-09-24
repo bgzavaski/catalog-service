@@ -21,6 +21,7 @@ public class ProdutoEntity {
     private String nome;
     private String descricao;
     private BigDecimal preco;
+    private Boolean ativo;
     @Column(name = "criado_em", nullable = false)
     private LocalDateTime criadoEm;
 
@@ -62,5 +63,13 @@ public class ProdutoEntity {
 
     public void setCriadoEm(LocalDateTime criadoEm) {
         this.criadoEm = criadoEm;
+    }
+    
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
     }
 }
